@@ -1,0 +1,10 @@
+<div>
+<h3 ng-if="list.items != null"> Menu items </h3>
+<table>
+  <tr ng-repeat="item in list.items">
+    <td> {{ item.name }} </td><td> {{ item.short_name }} </td><td> {{ item.description }} </td><td>
+    <button ng-click="list.onRemove({index: $index});">Don't want this one!</button> </td>
+  </tr>
+</table>
+</div>
+<div>{{ list.message }}</div>
